@@ -32,7 +32,7 @@
 
       <div class="overflow-hidden mb-4 pb-3">
         <p class="mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp"
-          data-appear-animation-delay="400" style="animation-delay: 400ms;">Emails : <b>code.sonik@gmail.com / tibang.kolani@gmail.com</b>
+          data-appear-animation-delay="400" style="animation-delay: 400ms;">Emails : <b>k0d3.s0n1k@gmail.com / tibang.kolani@gmail.com</b>
           <br> Tels : <b>00228 92942601 / 00228 70419811</b> </p>
       </div>
 
@@ -52,12 +52,12 @@
 
           <div class="form-group col-lg-6">
             <label class="required font-weight-bold text-dark text-2">Nom & Prénom</label>
-            <input type="text" value="" class="form-control" name="name" required>
+            <input type="text" class="form-control"  [ngModelOptions]="{standalone: true}" [(ngModel)]="name" required>
           </div>
 
           <div class="form-group col-lg-6">
             <label class="required font-weight-bold text-dark text-2">Adresse Email</label>
-            <input type="email" value="" class="form-control" name="email" required>
+            <input type="email" class="form-control"  [ngModelOptions]="{standalone: true}" [(ngModel)]="email" required>
           </div>
 
         </div>
@@ -66,7 +66,7 @@
 
           <div class="form-group col">
             <label class="font-weight-bold text-dark text-2">Titre</label>
-            <input type="text" value="" class="form-control" name="title" required>
+            <input type="text" class="form-control"  [ngModelOptions]="{standalone: true}" [(ngModel)]="title" required>
           </div>
 
         </div>
@@ -75,7 +75,7 @@
 
           <div class="form-group col">
             <label class="required font-weight-bold text-dark text-2">Message</label>
-            <textarea maxlength="5000" rows="8" class="form-control" name="message" required></textarea>
+            <textarea maxlength="5000" rows="8" class="form-control"  [ngModelOptions]="{standalone: true}" [(ngModel)]="message" required></textarea>
           </div>
 
         </div>
@@ -83,7 +83,7 @@
         <div class="form-row">
 
           <div class="form-group col">
-            <input type="submit" value="Envoyer" class="btn btn-primary btn-modern">
+            <a type="submit" (click)="onSubmit()" class="btn btn-primary btn-modern">Envoyer</a>
           </div>
 
         </div>

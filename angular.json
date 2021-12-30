@@ -33,7 +33,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendor/jquery/jquery.min.js",
+              "src/assets/vendor/popper/umd/popper.min.js"
+            ]
           },
           "configurations": {
             "production": {

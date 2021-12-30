@@ -13,6 +13,8 @@ import { HeaderComponent } from './utils/header/header.component';
 import { FooterComponent } from './utils/footer/footer.component';
 import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-service.component';
 import { HistoryComponent } from './pages/history/history.component';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   { path: '', component: HomeComponent  },
@@ -38,7 +40,9 @@ const routes: Routes = [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
