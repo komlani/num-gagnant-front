@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  title = 'num-gagnant';
-  toggleMenu = false;
 
-  constructor() { }
+export class HeaderComponent implements OnInit {
+
+  toggleMenu = false; //TODO: use or remove it :)
+
+  constructor(private titlePage:Title){}
+
+  setTitle(title:string){
+    this.titlePage.setTitle(title  + ' - Numéro Gagnant');
+  }
 
   ngOnInit(): void {
   }

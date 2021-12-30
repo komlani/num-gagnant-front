@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   firstItem: any;
 
   constructor(private afs: AngularFirestore)  {
-   afs.collection('numeros', ref => ref.orderBy('createdAt', 'desc').limit(10)).get().subscribe(
+   afs.collection('numeros', ref => ref.orderBy('createdAt', 'desc').limit(5)).get().subscribe(
      res => {
        const arr: any[] = []
        res.docs.forEach( item => {
@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
      }
    )
   }
+
   ngOnInit(): void {
   }
 
