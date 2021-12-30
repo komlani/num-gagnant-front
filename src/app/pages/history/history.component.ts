@@ -12,7 +12,7 @@ export class HistoryComponent implements OnInit {
   firstItem: any;
 
   constructor(private afs: AngularFirestore)  {
-    afs.collection('numeros', ref => ref.orderBy('createdAt', 'desc')).get().subscribe(
+    afs.collection('numeros', ref => ref.orderBy('createdAt', 'desc').limit(25)).get().subscribe(
       res => {
         const arr: any[] = []
         res.docs.forEach( item => {
