@@ -1,0 +1,59 @@
+
+  <section
+    class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7"
+    style="background-image: url(./assets/img/page-header/page-header-services.jpg);">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-12 align-self-center p-static text-center">
+          <h4 class="text-light"><strong><span *ngFor="let num of firstItem?.data().result as arr; let i = index" >{{ num }}
+            <span *ngIf="i< (arr.length - 1)"> - </span> </span></strong></h4>
+          <span class="sub-title font-weight-bold">Date : {{ firstItem?.data().date }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container py-1">
+    <div class="row">
+      <div class="col">
+        <blockquote class="with-borders">
+          <p>Pellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus
+            ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus
+            ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.</p>
+          <footer><cite title="Source Title">L'administrateur</cite></footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-1">
+
+    <div class="row">
+      <div class="col">
+
+        <div class="table-responsive">
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Liste des numéros</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data">
+                <td>{{ item.data().date }}</td>
+                <td><span *ngFor="let num of item.data().result as arr; let i = index" >{{ num }}
+                  <span *ngIf="i< (arr.length - 1)"> - </span></span></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+

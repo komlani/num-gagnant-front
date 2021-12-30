@@ -1,12 +1,7 @@
-<h1>{{ title }}</h1>
-
-<h3>{{ firstItem?.data().date }}</h3>
-<span *ngFor="let num of firstItem?.data().result" >{{ num }} - </span>
-
-<h2>Historique</h2>
-<ul>
-  <li *ngFor="let item of data">
-    {{ item.data().date }} <br>
-    <span *ngFor="let num of item.data().result" >{{ num }} - </span>
-  </li>
-</ul>
+<div class="body">
+<app-header></app-header>
+<div role="main" class="main">
+<router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+</div>
