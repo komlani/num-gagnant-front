@@ -11,11 +11,13 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderComponent } from './utils/header/header.component';
 import { FooterComponent } from './utils/footer/footer.component';
+import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-service.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent  },
   { path: 'about', component: AboutComponent  },
   { path: 'contact', component: ContactComponent  },
+  { path: 'terms-of-service', component: TermsOfServiceComponent  },
   { path: '**', redirectTo: ''  }
 ];
 
@@ -26,7 +28,8 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TermsOfServiceComponent
   ],
   imports: [
     BrowserModule,
