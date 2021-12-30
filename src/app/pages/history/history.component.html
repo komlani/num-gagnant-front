@@ -18,40 +18,39 @@
 
 </section>
 
-
 <div class="container py-1">
 
-  <div class="row">
+  <div class="table-responsive">
 
-    <div class="col">
+    <table class="table table-bordered">
 
-      <div class="table-responsive">
+      <thead>
 
-        <table class="table table-bordered">
+        <tr>
 
-          <thead>
-            <tr>
-              <th scope="col">Dates</th>
-              <th scope="col">Pronostics</th>
-            </tr>
-          </thead>
+          <th scope="col">Dates</th>
 
-          <tbody>
-            <tr *ngFor="let item of data">
-              <td>{{ item.data().date }}</td>
-              <td><span *ngFor="let num of item.data().result as arr; let i = index" >{{ num }}
-                <span *ngIf="i< (arr.length - 1)"> - </span></span></td>
-            </tr>
-          </tbody>
+          <th scope="col">Pronostics</th>
 
-        </table>
+        </tr>
 
-      </div>
+      </thead>
 
-    </div>
+      <tbody>
+
+        <tr *ngFor="let item of data">
+
+          <td>{{ item.data().date }}</td>
+
+          <td><span *ngFor="let num of item.data().result as arr; let i = index">{{ num }}
+              <span *ngIf="i< (arr.length - 1)"> - </span></span></td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
 
   </div>
-
-
 
 </div>
