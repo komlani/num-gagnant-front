@@ -9,8 +9,8 @@ import { Title } from '@angular/platform-browser';
 
 export class HeaderComponent implements OnInit {
 
-  toggleMenu = false; //TODO: use or remove it :)
-
+  isMenuCollapsed = true;
+  
   constructor(private titlePage:Title){}
 
   setTitle(title:string){
