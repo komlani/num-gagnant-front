@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +14,7 @@ export class HomeComponent implements OnInit {
   firstItem: any;
 
   constructor(private afs: AngularFirestore)  {
+    registerLocaleData(localeFr, 'fr');
    afs.collection('numeros', ref => ref.orderBy('createdAt', 'desc').limit(5)).get().subscribe(
      res => {
        const arr: any[] = []

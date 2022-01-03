@@ -7,7 +7,7 @@
         <h4 class="text-light"><strong><span *ngFor="let num of firstItem?.data().result as arr; let i = index">{{ num
               }}
               <span *ngIf="i< (arr.length - 1)"> - </span> </span></strong></h4>
-        <span class="sub-title font-weight-bold">Date : {{ firstItem?.data().date }}</span>
+        <span class="sub-title font-weight-bold text-capitalize">{{ firstItem?.data()?.createdAt?.toDate() | date: 'EEEE, dd MMMM yyyy':'':'fr' }}</span>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
 
             <tr *ngFor="let item of data">
 
-              <td>{{ item.data().date }}</td>
+              <td>{{ item.data()?.createdAt?.toDate() | date: 'dd/MM/yyyy' }}</td>
 
               <td>
 

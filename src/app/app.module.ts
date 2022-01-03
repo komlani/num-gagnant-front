@@ -15,6 +15,13 @@ import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-servi
 import { HistoryComponent } from './pages/history/history.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader'
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 const routes: Routes = [
   { path: '', component: HomeComponent  },
@@ -42,7 +49,15 @@ const routes: Routes = [
     AngularFirestoreModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
