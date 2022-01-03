@@ -246,28 +246,28 @@ html .bg-color-hover-before-quaternary:before:hover {
 
 html .bg-color-dark,
 html .bg-dark {
-	background-color: #212529 !important;
+	background-color: #505255 !important;
 }
 
 html .bg-color-hover-dark:hover,
 html .bg-hover-dark:hover {
-	background-color: #212529 !important;
+	background-color: #505255 !important;
 }
 
 html .bg-color-after-dark:after {
-	background-color: #212529 !important;
+	background-color: #505255 !important;
 }
 
 html .bg-color-hover-after-dark:after:hover {
-	background-color: #212529 !important;
+	background-color: #505255 !important;
 }
 
 html .bg-color-before-dark:before {
-	background-color: #212529 !important;
+	background-color: #505255 !important;
 }
 
 html .bg-color-hover-before-dark:before:hover {
-	background-color: #212529 !important;
+	background-color: #505255 !important;
 }
 
 html .bg-color-light,

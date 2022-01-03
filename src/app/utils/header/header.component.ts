@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
   setTitle(title:string){
     this.titlePage.setTitle(title  + ' - Numéro Gagnant');
+    this.isMenuCollapsed = true;
   }
 
   ngOnInit(): void {

@@ -1234,7 +1234,7 @@ html:not(.sticky-header-active) #header.header-transparent-dark-bottom-border-1 
 	}
 
 	html #header.header-transparent .header-body.bg-dark .header-nav-main:before, html #header.header-transparent .header-body.bg-color-dark .header-nav-main:before {
-		background-color: #212529;
+		background-color: #505255;
 	}
 
 	html #header.header-transparent .header-nav-main:before {
